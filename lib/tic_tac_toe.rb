@@ -42,4 +42,19 @@ class TicTacToe
     end
   end
 
+  def turn
+    token = current_player(@board)
+    puts "Please enter 1-9:"
+    input = gets.strip
+    index = input_to_index(input)
+    if !valid_move?(index)
+      puts "That's not a valid move. Please try again."
+      input = gets.strip
+      index = input_to_index(input)
+    else
+      move(index, token)
+    end
+    display_board
+  end
+
 end
