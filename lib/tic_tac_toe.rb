@@ -94,4 +94,22 @@ class TicTacToe
     end
   end
 
+  def full?
+    @board.all?{|space| space == "X" || space == "O"}
+  end
+
+  def draw?
+    full? && !won?
+  end
+
+  def over?
+    draw? || full? || won?
+  end
+
+  def winner(board)
+    if won?(board)
+      return board[won?(board)[0]]
+    end
+  end
+
 end
