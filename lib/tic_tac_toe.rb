@@ -57,4 +57,11 @@ class TicTacToe
     display_board
   end
 
+  def turn_count
+    taken_positions = @board.select do |position|
+      !(position.nil? || position == " ")
+    end
+    return taken_positions.length
+  end
+
 end
