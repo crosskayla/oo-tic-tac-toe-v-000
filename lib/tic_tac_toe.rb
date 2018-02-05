@@ -68,10 +68,10 @@ class TicTacToe
     (turn_count(@board) % 2 == 0) ? "X" : "O"
   end
 
-  def won?(board)
+  def won?
     exes = []
     ohs = []
-    board.each_with_index do |space, index|
+    @board.each_with_index do |space, index|
       if space == "X"
         exes << index
       end
