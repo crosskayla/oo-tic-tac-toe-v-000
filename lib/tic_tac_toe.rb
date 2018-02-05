@@ -69,3 +69,5 @@ class TicTacToe
   end
 
 end
+
+current_player
